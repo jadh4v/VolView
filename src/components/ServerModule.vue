@@ -76,7 +76,8 @@ const doMedianFilter = async () => {
 
   medianFilterLoading.value = true;
   try {
-    await client.call('medianFilter', [id, medianFilterRadius.value]);
+    // await client.call('monaiSegment', [id, medianFilterRadius.value]);
+    await client.call('monaiSegment', [id]);
   } finally {
     medianFilterLoading.value = false;
   }

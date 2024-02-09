@@ -38,6 +38,7 @@ import { Component, defineComponent, ref, watch } from 'vue';
 
 import DataBrowser from './DataBrowser.vue';
 import RenderingModule from './RenderingModule.vue';
+import ServerModule from './ServerModule.vue';
 import AnnotationsModule from './AnnotationsModule.vue';
 import { useToolStore } from '../store/tools';
 import { Tools } from '../store/tools/types';
@@ -64,11 +65,11 @@ const Modules: Module[] = [
     icon: 'cube',
     component: RenderingModule,
   },
-  // {
-  //   name: 'Remote',
-  //   icon: 'server-network',
-  //   component: ServerModule,
-  // },
+  {
+    name: 'Remote',
+    icon: 'server-network',
+    component: ServerModule,
+  },
 ];
 
 const autoSwitchToAnnotationsTools = [
